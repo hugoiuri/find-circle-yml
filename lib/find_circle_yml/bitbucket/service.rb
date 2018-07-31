@@ -26,6 +26,7 @@ module FindCircleYml
             end
             break unless parsed_response.key?('next')
             url = parsed_response.fetch('next')
+            url['https://api.bitbucket.org/2.0'] = ''
           end
         end
       end
